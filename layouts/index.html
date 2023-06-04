@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+  Hi, my name is Nathan! I'm a software engineering leader, runner, and dad, among other things.
+  I'm currently the Chief Technology Officer at <a href="https://vareto.com">Vareto</a>, and previously served in 
+  several roles from senior IC to VP of Engineering at <a href="https://www.smartsheet.com">Smartsheet</a>. 
+  Prior to that I held a number of engineering roles in both large companies and early-stage startups.
+</article>
+{{ range (where .Site.RegularPages "Section" "in" "posts") }}
+<p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ partial "metadata.html" . }}
+</p>
+{{ end }}
+{{ end }}

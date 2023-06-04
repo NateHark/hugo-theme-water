@@ -1,0 +1,12 @@
+<footer>
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.Author }}.</p>
+    <nav>
+        <ul>
+            {{ range .Site.Menus.social }}
+            <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</footer>
