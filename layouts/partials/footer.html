@@ -1,10 +1,15 @@
 <footer>
     <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.Author }}.</p>
     <nav>
-        <ul>
+        <ul class="horizontal-list">
             {{ range .Site.Menus.social }}
             <li>
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL }}">
+                    {{ if .Pre }}
+                    {{ $icon := printf "<i class=\"fa-brands fa-%s\"></i>" .Pre | safeHTML }}
+                    {{ $icon }}
+                    {{ end }}
+                </a>
             </li>
             {{ end }}
         </ul>
