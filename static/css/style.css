@@ -10,6 +10,12 @@ h6 {
   font-family: 'Playfair Display', serif;
 }
 
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 ul.horizontal-list {
     list-style-type: none;
     padding: 0;
@@ -19,4 +25,14 @@ ul.horizontal-list li {
     display: inline;
     position: relative;
     margin-right: 0.5em;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    margin-top: 0;
+  }
 }
