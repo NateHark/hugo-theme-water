@@ -1,10 +1,12 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-    <p>{{ .Summary }}</p>
-</p>
+
+{{ $tagsPage := eq .Title "Tags"}}
+
+{{ if $tagsPage }}
+{{ partial "tag-list.html" .}}
+{{ else }}
+{{ partial "post-list.html" . }}
 {{ end }}
+
 {{ end }}

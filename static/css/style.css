@@ -36,3 +36,34 @@ ul.horizontal-list li {
     margin-top: 0;
   }
 }
+
+a.button {
+  color: #1d1d1d;
+  color: var(--form-text);
+  background-color: #efefef;
+  background-color: var(--background);
+  font-family: inherit;
+  font-size: inherit;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  a.button {
+  background-color: #161f27;
+  background-color: var(--background);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  a.button {
+  color: #fff;
+  color: var(--form-text);
+  }
+}
